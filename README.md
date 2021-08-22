@@ -154,7 +154,7 @@ App Região 1, App Região 2, App Região 3, App Região N...
 
 **Microserviços não são moda, mas sim necessidade.**
 
-### Microservices: Principais características
+### Microservices: Principais características (Martin Fowler)
 - Componentização via serviços
 - Organização em torno do negócio
 - Estrutura baseada em Produtos. Não em projetos
@@ -164,3 +164,22 @@ App Região 1, App Região 2, App Região 3, App Região N...
 - Automação de Infraestrutura
 - Desenhado para falhar
 - Design evolutivo
+
+#### Componentização via serviços
+- Services dos microserviços != Services da OO
+- "Componente é uma unidade de software independente que pode ser substituida ou atualizada"
+
+**Desvantagens**
+- Chamadas externas são mais custosas do que chamadas locais
+- Cruzamento entre componentes pode se tornar complexo
+- Transações entre serviços são "grandes desafios"
+- Mudanças bruscas em regras de negócio podem afetar diversos serviços tornando o processo difícil de ser refeito
+
+#### Organização em torno do negócio
+**Conceito importante**
+Um projeto é baseado em um ou mais produtos que trabalham em diferentes contextos. 
+- Time de desenvolvedores por produto
+- Muitas empresas tratam os times como "squads"
+- Cada squad é multidisciplinar
+- Cada squad é responsavel por um ou mais produtos
+- Cada produto pode ter um ou mais serviços envolvidos
