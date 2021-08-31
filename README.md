@@ -183,3 +183,8 @@ Um projeto é baseado em um ou mais produtos que trabalham em diferentes context
 - Cada squad é multidisciplinar
 - Cada squad é responsavel por um ou mais produtos
 - Cada produto pode ter um ou mais serviços envolvidos
+
+### Microservices: Smart endpoints & dumb pipes
+- Exposição de APIs (ex: Rest)
+- Comunicação entre serviços
+- Comunicação síncrona e assíncrona
