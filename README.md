@@ -188,3 +188,29 @@ Um projeto é baseado em um ou mais produtos que trabalham em diferentes context
 - Exposição de APIs (ex: Rest)
 - Comunicação entre serviços
 - Comunicação síncrona e assíncrona
+- Utilização de sistemas de mensageria (ex: RabbitMQ)
+- Garantia de que um serviço foi executado baseado na execução das filas
+
+### Microservices: Governança descentralizada
+- Ferramenta certa para o trabalho certo. Tecnologias podem ser definidas baseadas na necessidade do produto
+- Diferentes padrões entre squads
+- Contratos de interface de forma independente
+
+### Microservices: Automação de infraestrutura
+- Cloud computing
+- Testes automatizados
+- Continuous delivery
+- Continuous Integration
+- Load balancer/Autoscaling
+
+### Microservices: Desenhado para falhar
+- Tolerância a falha
+- Serviços que se comunicam precisam de fallback
+- Logging
+- Monitoramento em tempo real
+- Alarmes
+  
+### Microservices: Design evolutivo
+- Produtos bem definidos podem evoluir ou serem extintos por razões de negócio
+- Gerenciamento de versões
+- Replacement and upgradeability
