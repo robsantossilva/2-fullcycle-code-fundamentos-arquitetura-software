@@ -214,3 +214,36 @@ Um projeto é baseado em um ou mais produtos que trabalham em diferentes context
 - Produtos bem definidos podem evoluir ou serem extintos por razões de negócio
 - Gerenciamento de versões
 - Replacement and upgradeability
+
+### API Gateways
+"Uma API gateway recebe todas as chamadas de APIs dos clientes e então as roteia para os microserviços correspondentes..."
+(nginx.com)
+
+Em alguns casos ela também é responsável por realizar processos de verificação de segurança, como autenticação e autorização.
+
+![](./.github/api-gateway-1.png)
+<br>
+![](./.github/api-gateway-2.png)
+
+**API Gateway na AWS**
+![](./.github/api-gateway-3.png)
+
+### Service Discovery
+Processo de service Discovery é responsável por prover mecanismos de identificação dos serviços disponíveis e suas instâncias
+
+![](./.github/service-discovery-1.png)
+
+**Service Discovery - Client Side**
+![](./.github/service-discovery-client-side.png)
+
+**Service Discovery - Server Side**
+![](./.github/service-discovery-server-side.png)
+
+#### Ferramentas populares:
+- Netflix Eureka
+- Consul
+- Etcd
+- ZooKeeper
+
+### Comunicação entre microserviços
+Comunicação Assíncrona: Mensageria
