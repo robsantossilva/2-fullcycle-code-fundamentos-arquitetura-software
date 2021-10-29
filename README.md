@@ -259,3 +259,7 @@ Comunicação Assíncrona: Mensageria
 ### Dupla latência
 ![](./.github/dupla-latencia.png)
 
+### BFF - Backend for Frontend
+Uma camada baseada no dispositivo/client que esta acessando a aplicação
+
+
