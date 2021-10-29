@@ -247,3 +247,19 @@ Processo de service Discovery é responsável por prover mecanismos de identific
 
 ### Comunicação entre microserviços
 Comunicação Assíncrona: Mensageria
+
+### Mecanismos de filas - RabbitMQ
+- Message Broker
+- Implementa AMQP (Advanced Message Queuing Protocol)
+- Producer <==> Brokers <==> Consumers
+- Desacoplamento entre serviços
+- Rápido e Poderoso
+- Padrão de mercado
+
+### Dupla latência
+![](./.github/dupla-latencia.png)
+
+### BFF - Backend for Frontend
+Uma camada baseada no dispositivo/client que esta acessando a aplicação
+
+
