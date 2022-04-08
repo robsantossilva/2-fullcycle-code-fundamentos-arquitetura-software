@@ -85,8 +85,8 @@ Infraestrutura: on-premise
 - Sistema monolítico é Vida!
 
 ### Escalando software
-- Escala Vertical: Aumento de Recursos Computacionais
-- Escala Horizontal: Adição pequenas maquinas acessadas através de um LoadBalancer
+- Escala Vertical: Aumento de Recursos Computacionais. A mesma aplicação com mais recursos computacionais
+- Escala Horizontal: Adição pequenas maquinas acessadas através de um LoadBalancer. Pequenos pedaços da aplicação acessados por um load balance
 
 ### Detalhes sobre a arquitetura da aplicação
 - Disco efêmero

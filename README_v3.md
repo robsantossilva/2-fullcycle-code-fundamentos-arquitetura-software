@@ -69,3 +69,141 @@ Há empresas que apesar de não possuírem o cargo de arquiteto(a) de software, 
 - Mergulho empadrões de projeto e de desenvolvimento e suas boas práticas
 - Ter mais clareza do impacto que o software possui na organização como um todo
 - Tomar decisões com mais confiança
+
+## Arquitetura vs Design
+- Arquitetura: Escopo global ou alto nível
+- Design: Escopo local
+
+"Atividades relacionadas a arquitetura de software são sempre de design. Entretanto, nem todas as atividades de design são sobre arquitetura. O objetivo primário da arquitetura de software é garantir que os atributos de qualidade, restrições de alto nível e os objetivos do negócio, sejam atendidos pelo sistema. Qualquer decisão de design que não tenha relação com este objetivo não é arquitetural. Todas as decisões de design para um componente que não sejam 'visíveis' fora dele, geralmente, também não são."
+
+## Sustentabilidade
+- Desenvolver software é caro
+- Software resolve uma "dor"
+- Software precisa se pagar ao longo do tempo
+- Acompanhar a evolução do negócio
+- Quanto mais tempo o software ficar no ar, mais retorno gera
+- A solução precisa ser arquitetada
+
+## Pilares da Arquitetura de Software
+- Estruturação
+  - Fácil evolução, componentização para atender os objetivos de negócio
+- Componentização
+- Relacionamento entre sistemas
+- Governança
+
+## Requisitos arquiteturais (RAs)
+- Performance
+- Armazenamento de Dados
+- Escalabilidade
+- Segurança
+- Legal
+- Audit
+- Marketing
+
+## Caracteristicas arquiteturais
+Livro: Fundamentos de Arquitetura de Software
+- Operacionais
+- Estruturais
+- Cross-Cutting
+
+#### Caracteristicas Operacionais
+- Disponibilidade
+- Recuperação de desastres
+- Performance
+  - Latência
+  - Throughput (Taxa de transferência)
+- Recuperação (backup)
+  - Testar backup
+  - Backups em redes diferentes
+- Confiabilidade e segurança
+- Robustes
+- Escalabilidade
+
+#### Caracteristicas Estruturais
+- Configurável
+- Extensibilidade
+- Fácil instalação
+  - Padronização do ambiente em Containers
+- Reuso de componentes
+- Internacionalização
+- Fácil manutenção
+- Portabilidade (diversos bancos de dados)
+- Fácil suporte (logs, debugging)
+
+#### Caracteristicas Cross-Cutting
+- Acessibilidade
+- Processo de retenção e recuperação de dados (quanto tempo os dados serão mantidos)
+- Autenticação e Autorização
+- Legal
+- Privacidade
+- Usabilidade
+
+## Perspectivas para arquitetar software de qualidade
+- Performance
+- Escalabilidade
+- Resiliência
+
+## Performance
+- É o desempenho que um software possui para completar um determinado workload
+- As unidades de medida para avaliarmos a performance de um software são:
+  - Latência ou "response time"
+  - Throughput
+- Ter um software performático é diferente de ter um software escalável
+
+#### Métricas para medir a performance
+- Diminuir a latência
+  - Normalmente medida em milliseconds
+  - É afetada pelo tempo de processamento da aplicação, rede e chamadas externas
+- Aumentando Throughput
+  - Quantidade de requisições simultaneas
+  - Diretamente ligado a latência
+
+#### Principais razões para baixa performance
+- Processamento ineficiente
+- Recursos computacionais limitados
+- **Trabalhar de forma bloqueante**
+- **Acesso serial a recursos**
+
+#### Principais formas para aumentar a eficiência
+- Escala da capacidade computacional (CPU, Disco, Memória, Rede)
+- Lógica por trás do software (Algoritmos, queries, overhead de frameworks)
+- Concorrência e paralelismo
+- Banco de dados (tipos de bancos, schema)
+- Caching
+
+#### Capacidade computacional: Escala Vertical vs Horizontal
+
+![](./.github/horizontal-vs-vertical-scaling.webp)
+
+#### Concorrência e paralelismo
+"Concorrência é sobre **lidar com muitas coisas ao mesmo tempo**. Paralelismo é **fazer muitas coisas ao mesmo tempo**". Rob Pike
+
+![](./.github/concorrencia-paralelismo.jpeg)
+
+#### Caching
+- Cache na borda/Edge computing
+- Dados estáticos
+- Páginas web
+- Funções internas
+  - Evita reprocessamento de algoritmos pesados
+  - Acesso ao banco de dados
+- Objetos
+
+**Caching: Exclusivo vs Compartilhado**
+
+**Exclusivo**
+- Baixa latência
+- Duplicado entre os nós
+- Problemas relacionados a sessões
+
+**Compartilhado**
+- Maior latência
+- Não há duplicação
+- Sessões compartilhadas
+- Banco de dados externo
+  - MySQL
+  - Redis
+  - Memcache
+
+**Caching: Edge computing**
+
