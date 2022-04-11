@@ -206,4 +206,45 @@ Livro: Fundamentos de Arquitetura de Software
   - Memcache
 
 **Caching: Edge computing**
+- Cache realizado mais próximo ao usuário
+- Evita a requisição chegar até o cloud Provider/Infra
+- Normalmente arquivos estático ficam na edge
+- CDN - Content Delivery Network
+- Cloudflare workers
+- Vercel
+
+## Escalabilidade
+Escalabilidade é a capacidade de sistemas suportarem o aumento (ou a redução) dos workloads incrementando (ou reduzindo) o custo em menor ou igual proporção.
+
+#### Escalabilidade vs Performance
+Enquanto **performance tem o foco de reduzir a latência e aumentar o throughput**, a **escalabilidade visa termos a possibilidade de aumentar ou diminuir o throughput adicionando ou removendo a capacidade computacional**.
+
+#### Escalando software - Descentralização
+- Disco efêmero: Sem preocupação com a perca de dados.
+- Servidor de Aplicação vs Servidor de Assets
+- Cache centralizado
+- Sessões centralizadas
+- Upload/Gravação de Arquivos
+
+Tudo pode ser destruido e criado facilmente.
+
+#### Escala de Banco de Dados
+- Aumentando recursos computacionais
+- Distribuindo responsabilidades (escrita vs leitura)
+- Shards de forma horizontal
+- Serverless
+
+#### Otimização de queries e índice
+- Use APM
+- Trabalhe com índices de forma consciente
+- Explain nas queries
+- CQRS (Command Query Responsibility Segregation)
+  
+#### Proxy reverso
+É um servidor que fica na frente dos servidores web e encaminha as solicitações do cliente (por exemplo, vavegador web) para esses servidores web.
+
+**Soluções Populares**
+- Nginx
+- HAProxy (HA = High Availability)
+- Traefik
 
