@@ -248,3 +248,32 @@ Tudo pode ser destruido e criado facilmente.
 - HAProxy (HA = High Availability)
 - Traefik
 
+## Resiliência
+- É um conjunto de estratégias adotadas intencionalmente para a **adaptação** de um sistema quando uma falha ocorre.
+- Resiliência: Você se dobra ou quebra
+- Ter estratégias de resiliência nos possibilita minimizar os tiscos de perda de dados e transações importantes para o negócio
+
+#### Quais as estratégias?
+
+#### Proteger e ser protegido
+- Um sistema em uma arquitetura distribuída precisa adotar mecanismos de autopreservação para garantir ao máximo sua operação com qualidade.
+- Um sistema não pode ser egoista aoponto de realizar mais requisições em um sistema que está falhando
+- Um sistema lento no ar muitas vezes é pior que um sistema fora do ar. (Efeito dominó)
+
+#### Health check
+- Sem sinais vitais, não é possível saber a "saúde" de um sistema
+- Um sistema que não esta saudável possui uma chance de se recuperar caso o tráfego pare de ser direcionado a ele temporariamente
+- Health check de qualidade
+
+#### Rate Limiting
+- Protege o sistema baseado no que ele foi projetado para suportar
+- Preferência programada por tipo de client
+
+#### Circuit breaker
+- Protege o sistema fazendo com que as requisições feitas para ele sejam negadas. Ex: 500
+- Circuito fechado = requisição chega normalmente
+- Circuito aberto = requisição não chega ao sistema. Erro instantânea ao client
+- Meio aberto = Permite uma quantidade limitada de requisição para verificação se o sistema tem condições de voltar ao ar integralmente.
+- Circuit Breaker na Aplicação vs Na Rede
+
+#### API Gateway
