@@ -277,3 +277,39 @@ Tudo pode ser destruido e criado facilmente.
 - Circuit Breaker na Aplicação vs Na Rede
 
 #### API Gateway
+Centraliza o recebimento de todas as requisições.
+- Garante que requisições "inapropriadas" cheguem até o sistema: Ex: usuário não autenticado
+- Implementa políticas de Rate Limiting, Health check, etc
+
+#### Service Mesh
+- Controla o tráfego de rede
+- Proxy ao lado do sistema. Camada entre as aplicações
+- É possivel controlar e medir o trafego da rede
+- Evita implementações de proteção pelo próprio sistema
+- mTLS (Comunicação criptografada)
+- CIrcuit breaker, retry, timeout, fault injection, etc
+
+#### Trabalhar de forma assíncrona
+- Evita perda de dados
+- Não há perda de dados no envio de uma transação se o server estiver fora
+- Servidor pode processar a transação em seu tempo quando estiver online
+- Entender com profundidade o message broker/sistema de stream
+
+#### Garantias de entrega com Retry
+- Politica de novas tentativas. A applicação não controla Retry
+- Lógica para re-tentativas
+
+#### Garantias de entrega com Kafka
+- Ack 0 - Envio sem garantia de entrega: Maior velocidade
+- Ack 1 Leader - Envio com garantia de entrega: Perde um pouco na velocidade
+- Ack 1 All - Envio com garantia de todos os brokers: Mais lento
+
+<--- Velocidade ---|--- Garantia de entrega --->
+<--- Ack 0 ---|--- Ack 1 Leader ---|--- Ack 1 All --->
+
+#### Situações complexas
+- Resiliencia: Importante, pensada no dia 0 de forma intencional
+- O que acontece se o message broker cair?
+- Haverá perda de mensagens?
+- Seu sistema ficará fora do ar?
+- Como garantir resiliência?
